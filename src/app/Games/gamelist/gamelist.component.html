@@ -1,0 +1,67 @@
+<!-- <p>gamelist works!</p> -->
+
+<div class="container">
+  <div main>
+    <nav class="navbar">
+      <p>Game List</p>
+    </nav>
+    <div class="filter">
+      <input
+        type="text"
+        pInputText
+        pKeyFilter="alpha"
+        placeholder="Type To Filter"
+      />
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="List"
+        class="p-button-raised p-button-text p-button-plain"
+      ></button>
+    </div>
+    <p-table [value]="products">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>
+            <button
+              pButton
+              pRipple
+              type="button"
+              class="p-button-raised p-button-text p-button-plain"
+            >
+              Hide Image
+            </button>
+          </th>
+
+          <th>Game</th>
+          <th>Part#</th>
+          <th>Realease Date</th>
+          <th>Cost</th>
+          <th>5Thumbs Rating</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr routerLink="/games">
+          <td>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5781/5781105.png"
+              width="40px"
+            />{{ product.Hideimage }}
+          </td>
+          <td>{{ product.Game }}</td>
+          <td>{{ product.Part }}</td>
+          <td>{{ product.ReleaseDate }}</td>
+          <td>{{ product.Cost }}</td>
+          <td>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/535/535190.png"
+              width="10px"
+            />
+            {{ product.Thumbrating }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

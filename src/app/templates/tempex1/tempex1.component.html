@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+    {{title}}
+</div>
+
+<div style="text-align: center;">
+
+    <h3>hiiiiiiii</h3>
+    <ng-template  ngFor let-person [ngForOf]= "allpersons" let-i = index>   
+        <p>{{i + 1}} {{person.name}} : {{person.age}} </p>
+       
+        <!-- {{person.name}} : {{person.age}} -->
+    </ng-template>
+    <button pButton type="button" label="Click Me!" (click)="btnfunction($event)" class="p-button"></button>
+
+    
+
+</div>

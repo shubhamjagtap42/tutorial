@@ -1,0 +1,51 @@
+<!-- <h4>Welcome To About Us</h4> -->
+
+<div class="container">
+  <div class="main">
+    <nav class="navbar">
+      <h2 id="manage">Expense Manager</h2>
+    </nav>
+
+    <h4>Expense Entry List</h4>
+
+    <button
+      pButton
+      type="button"
+      label="LIST"
+      (click)="listitem()"
+      class="p-button-link"
+    ></button>
+
+    <button pButton type="button" label="EDIT" class="p-button-info"></button>
+
+    <a class="btn btn-primary" routerLink="/about/ouremployee" >Employees</a>
+    <br />
+    <a class="btn btn-primary" routerLink="/about/ourlist">List</a>
+
+    <p-table [value]="products">
+      <!-- <span *ngIf="Isavailable; then condition1 "></span> -->
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Spent On</th>
+          <th>View</th>
+        </tr>
+      </ng-template>
+
+      <!-- <ng-template ngFor let-p [ngForOf]="products" let-i="index"> -->
+      <ng-template pTemplate="body" let-p>
+        <tr>
+          <td>{{ p.Item }}</td>
+          <td>{{ p.Amount }}</td>
+          <td>{{ p.category }}</td>
+          <td>{{ p.Location }}</td>
+          <td>{{ p.SpendOn }}</td>
+          <td><a routerLink="../view">View</a>{{ p.View }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

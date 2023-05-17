@@ -1,0 +1,202 @@
+<div style="text-align: center">
+  <h2>UPPERCASE PIPE</h2>
+
+  <b>{{ title | uppercase }}</b
+  ><br />
+
+  <hr />
+  <h2>lowercase pipe</h2>
+  <b>{{ title | lowercase }}</b
+  ><br />
+
+  <hr />
+  <h2>date pipe</h2>
+  <b>{{ todaydate | date : "d/M/y" }}</b
+  ><br />
+  <b>{{ todaydate | date : "shortTime" }}</b
+  ><br />
+  <b>{{ currentDate | date : "dd/MM/yyyy" }}</b
+  ><br />
+  <b>{{ currentDate | date | uppercase }}</b>
+
+  <hr />
+  <h2>Currency pipe</h2>
+  <b>{{ 6589.23 | currency : "USD" }}</b
+  ><br />
+  <b>{{ 6589.23 | currency : "USD" : true }}</b
+  ><br />
+  <b>{{ 100 | currency : "INR" }}</b
+  ><br />
+
+  <hr />
+  <h2>jsonval</h2>
+  <b>{{ jasonval | json }}</b>
+
+  <hr />
+  <h2>Custom Pipe</h2>
+  <b>sqrt of 625 is{{ 624 | sqrt }}</b
+  ><br />
+  <b>sqrt of 625 is{{ 624 | sqrt | number }}</b>
+
+  <hr />
+  <h2>Custom pipe power</h2>
+  <b>power of number 10 is{{ 10 | power : 2 }}</b
+  ><br />
+  <b>power of number 10 and we want to add 20 is :{{ 10 | power : 2 : 20 }}</b>
+
+  <hr />
+  <h2>UserName Pipe</h2>
+  <p>{{ "Shubham" | userFullName : "jagtap" }}</p>
+
+  <hr />
+  <h2>Reverse Str pipe</h2>
+  <p>The reverse String Is :{{ "shubham" | shubham }}</p>
+
+  <hr />
+  <h2>Reverse str uppercase</h2>
+  <p>The reverse String Is :{{ "shubham" | uppercase }}</p>
+
+  <hr />
+  <h2>date pipe</h2>
+  <b>THIS IS SHORT DATE FORMAT      : {{ todaydate | date : "short" }}</b
+  ><br />
+  <b>THIS IS MEDIUM DATE FORMAT     : {{ todaydate | date : "medium" }}</b
+  ><br />
+  <b>THIS IS LONG DATE FORMAT       : {{ todaydate | date : "long" }}</b
+  ><br />
+  <b>THIS IS FULL DATE FORMAT       : {{ todaydate | date : "full" }}</b
+  ><br />
+  <b>THIS IS FULLDATE DATE FORMAT   : {{ todaydate | date : "fullDate" }}</b
+  ><br />
+  <b>THIS IS LONGTIME DATE FORMAT   : {{ todaydate | date : "longTime" }}</b
+  ><br />
+  <b>THIS IS MEDIUMTIME DATE FORMAT : {{ todaydate | date : "mediumTime" }}</b
+  ><br />
+  <b>THIS IS FULLTIME DATE FORMAT   : {{ todaydate | date : "fullTime" }}</b>
+  <br />
+
+  <hr>
+
+  <h2>uppercase name</h2>
+  <p>upper name is :{{"shubham" | uppercase}}</p>
+  <br />
+
+  <hr>
+  <h2>slice method</h2>
+  <p>the Slice Name Is : {{"shubham" |slice :2:6}}</p>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+<hr>
+
+  <button pButton type="button" label="Show" (click)="showtable()" ></button>
+
+  <div style="text-align: center;">
+
+      <table id="tab" border="1" >
+        <span *ngIf="checked; then condition1 "></span>
+    <ng-template #condition1>
+          <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>annualsalary</th>
+        <th>dateofbirth</th>
+    </tr>
+</ng-template>
+   
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name | uppercase}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.annualSalary | currency : "INR"}}</td>
+            <td>{{emp.dateOfBirth }}</td>
+        </tr>
+        
+    </tbody>
+
+
+  </table>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ 
+
+<hr>
+<h2>age pipe</h2>
+<p>My Age Is : {{ birthday  | age}}</p> 
+
+
+
+
+<div class="row">
+    <p> Fahrenheit : <input type="text"  /> 
+    Celsius : {{ Fahrenheit | tempconverter:'C'}} </p>
+  </div>
+
+  <div class="row">
+    <h3>Celsius to Fahrenheit </h3>
+  </div>
+  <div class="row">
+    <p> celsius : <input type="text"  /> 
+     Fahrenheit : {{ 98 | tempconverter:'F'}} </p>
+  </div>
+</div>
+
+<div style="text-align: center;">
+
+    <h2>capitalfirst</h2>
+
+    <p>capitalfirst :{{first | titlecase}}</p>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

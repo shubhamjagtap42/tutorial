@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+    
+    <h1>Hello</h1>  
+
+<h2 > Name :<span  *ngIf="check;then condition1 else condition2"> </span>
+    <ng-template #condition1>
+
+        {{Name}}
+    </ng-template>
+    <ng-template #condition2>
+
+    {{Name}}
+    </ng-template>
+</h2>
+
+    
+<p (click)="changeName()">Click here to change</p> 
+</div>

@@ -1,0 +1,172 @@
+<div style="text-align: center">
+  <h1>Welcome To {{ title }}</h1>
+</div>
+
+<div style="text-align: center">
+  Months :
+  <select (change)="changemonths($event)">
+    <option *ngFor="let i of months">
+      {{ i }}
+    </option>
+  </select>
+</div>
+<br />
+
+<div style="text-align: center">
+  <span *ngIf="!Isavailable; then condition1; else condition2"
+    >Condition is Valid</span
+  >
+
+  <ng-template #condition1>Condition Is Valid</ng-template>
+  <ng-template #condition2>Condition Is InValid</ng-template>
+</div>
+
+<button
+  pButton
+  type="button"
+  [disabled]="IsUnchanged"
+  (click)="Clickfunction($event)"
+  class="p-button-success"
+>
+  CLICK ME!
+</button>
+<br />
+
+<button
+  pButton
+  type="button"
+  (click)="MyClickfunction($event)"
+  class="p-button-help"
+>
+  SAVE
+</button>
+<br />
+<br />
+<!-- <div style="text-align: center;">
+
+    <input type="text" (keydown)="onKeydown($event)" pInputText />
+</div> -->
+
+<div style="text-align: center">
+  <input type="text" (keyup)="onKeyUp($event)" pInputText />
+</div>
+<!-- <div style="text-align: center;">
+
+    <input type="text" (blur)="blur($event)" pInputText />
+</div> -->
+
+<br />
+<!-- blur event is triggered when element loss his focus -->
+<form style="text-align: center">
+  <label>onblur event</label><br />
+  <input type="text" placeholder="name" (blur)="onBlur($event)" pInputText />
+</form>
+<br />
+<!-- The (focus) event is triggered when an element gains its focus. -->
+
+<form style="text-align: center">
+  <label>onfocus event</label><br />
+  <input type="text" placeholder="name" (focus)="onFocus($event)" pInputText />
+</form>
+<!-- 
+<p>
+    start editing to see some magic......
+</p> -->
+
+<div class="scroll" style="text-align: center" (scroll)="divScroll($event)">
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+  s<br />
+  c<br />
+  r<br />
+  o<br />
+  l<br />
+  l<br />
+</div>
+
+<!-- <form novalidate
+      [formGroup]="myform"
+      ></form> -->
+<button pButton type="button" (submit)="onSubmit($event)" class="p-button-help">
+  SUBMIT
+</button>
+<button
+  pButton
+  type="button"
+  (dblclick)="ondblclick($event)"
+  class="p-button-help"
+>
+  DBLCLICK
+</button>
+
+<p (cut)="onCut($event)">
+  Save your favorite articles to read offline, sync your reading lists across
+  devices and customize your reading experience with the official Wikipedia app.
+</p>
+
+<p (copy)="onCopy($event)">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia, error
+  nam soluta facilis, ea veniam veritatis, voluptas necessitatibus id
+  consequuntur in nisi.
+</p>
+
+<p (paste)="onPaste($event)">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cumque
+  placeat excepturi?
+</p>
+
+<div style="text-align: center">
+  <section>foo</section>
+  <section (mouseenter)="onMouseEnter($event)">bar</section>
+  <section>baz</section>
+</div>
+<div style="text-align: center">
+  <section>Nice</section>
+  <section (mousedown)="onMouseDown($event)">Coffee</section>
+  <section>Center</section>
+</div>
+<div style="text-align: center">
+  <section>Nice</section>
+  <section (mouseup)="onMouseUp($event)">Coffee</section>
+  <section>Center</section>
+</div>

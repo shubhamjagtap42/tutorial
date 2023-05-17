@@ -1,0 +1,67 @@
+<p>samplecard works!</p>
+
+<div class="simplecard">
+  <p-card styleClass="shadow">
+    <div class="p-fluid grid">
+      <div class="col-4">
+        <label for="dateformat">Date</label>
+
+        <p-calendar dateFormat="mm-dd-yy" inputId="dateformat"></p-calendar>
+      </div>
+
+      <div class="col-4">
+        <label>Assigned Analyst</label>
+
+        <p-dropdown optionLabel="name"></p-dropdown>
+      </div>
+
+      <div class="col-4">
+        <label>Add Table</label>
+
+        <p-dropdown optionLabel="name"></p-dropdown>
+      </div>
+
+      <div class="col-4">
+        <label for="dateformat">To Date</label>
+
+        <p-calendar dateFormat="mm-dd-yy" inputId="dateformat"></p-calendar>
+      </div>
+
+      <div class="col-4">
+        <label>Add Top Shareholde Exists</label>
+
+        <p-dropdown optionLabel="name" styleClass="drop"></p-dropdown>
+      </div>
+
+      <div class="col-4">
+        <label>Add Top Shareholde Exists</label>
+
+        <p-dropdown optionLabel="name"></p-dropdown>
+      </div>
+
+      <div class="col-4">
+        <label>Add Estimates</label>
+
+        <p-dropdown optionLabel="name"></p-dropdown>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+  </p-card>
+
+  <div class="footer">
+    <p-button
+      label="Delete"
+      icon=""
+      styleClass="p-button-danger"
+      [style]="{ 'margin-left': '.5em' }"
+    ></p-button>
+    <p-button label="Preview" icon=""></p-button>
+    <p-button
+      label="create"
+      icon=""
+      [style]="{ 'margin-left': '.5em' }"
+    ></p-button>
+  </div>
+</div>

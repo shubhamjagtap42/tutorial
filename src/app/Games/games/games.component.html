@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="main">
+    <nav class="navbar">
+      <button
+        pButton
+        type="button"
+        class="p-button-outlined"
+        routerLink="/home"
+      >
+        HOME
+      </button>
+
+      <button
+        pButton
+        pRipple
+        type="button"
+        routerLink="/gamelist"
+        class="p-button-outlined p-button-secondary"
+      >
+        GAMES
+      </button>
+
+      <button
+        pButton
+        pRipple
+        type="button"
+        routerLink="/samplecard"
+        class="p-button-outlined p-button-secondary"
+      >
+        CARD
+      </button>
+    </nav>
+    <div class="game">
+      <p>Game Detail : Mega Man</p>
+    </div>
+    <div class="gameimage">
+      <p-rating [(ngModel)]="val1"></p-rating>
+      <p-image styleClass="image" src="" alt="Image" width="150"></p-image>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<!-- 
+<p *ngFor="let i of months">
+    {{i}}
+</p> -->
+<div style="text-align: center">Welcome To {{ title }}</div>
+
+<br />
+
+<!-- <p-dropdown *ngFor="let i of months">
+    {{i}}
+</p-dropdown> -->
+
+<div>
+  Months :
+
+  <select>
+    <option *ngFor="let i of months">{{ i }}</option>
+  </select>
+</div>
+
+<br />
+
+<div>
+  <span *ngIf="!Isavailable;">Condition Is Valid</span>
+  <ng-template #condition1> Condition is invalid</ng-template>
+
+  
+</div>

@@ -1,0 +1,37 @@
+.tab-student{
+    text-align: center;
+    align-items: center;
+    margin-left: 34%;
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif0;
+    font-size:larger;
+    font-weight: 300;
+    border-radius: 1px solid black;
+
+    
+}
+.heading{
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.main{
+    text-align: center;
+
+}
+table{
+    border: solid;
+    text-align: center;
+    margin-left: 43%;
+}
+tr{
+    
+    /* border-style: solid; */
+    
+    
+}
+td{
+    /* border: 1px solid; */
+    border-collapse: collapse;
+    
+}

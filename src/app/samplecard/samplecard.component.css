@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.simplecard {
+  margin-left: 250px;
+  margin-top: 100px;
+}
+.calender {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-auto-flow: row;
+}
+.lb {
+  padding: 10px;
+  font-weight: bolder;
+  color: black;
+}
+.lb1 {
+  /* padding: 10px;
+    margin-left: 20px;
+    font-weight: bolder;
+    color: black; */
+}
+.xyz {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  grid-auto-flow: row;
+  width: 350px;
+}
+:host::ng-deep.shadow {
+  border-width: thin;
+  background-color: grey;
+  display: inline-flex;
+  margin-top: 55px;
+  margin-left: -214px;
+}
+
+:host::ng-deep.drop1 {
+  margin-left: 77px;
+  width: 180px;
+}
+:host::ng-deep.drop2 {
+  margin-left: 5px;
+  width: 180px;
+}
+.footer {
+  /* display:inline-flex; */
+  margin-top: 80px;
+  margin-left: 55%;
+}
+.calender1 {
+  margin-top: 100px;
+  display: flex;
+
+  justify-content: space-between;
+}
+p-button + p-button {
+  margin-left: 10px;
+}
+
+.calender2 {
+  margin-top: 100px;
+  display: flex;
+}

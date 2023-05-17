@@ -1,0 +1,27 @@
+<div class="container">
+  <div style="text-align: center">welcome To {{ name }}</div>
+  <br />
+
+  <h4 style="text-align: center">Learn Angular With Edureka</h4>
+
+  <div>
+    <input type="text" pInputText /><br>
+    <input type="text" pInputText /><br>
+
+    <button pButton type="button" label="multiply" ></button>
+
+    
+
+    <!-- <input type="number" ng-model="num1" ng-init="num1=2" />
+
+    <input type="number" ng-model="num2" ng-init="num2=2" /> -->
+
+    <p style="text-align:center">{{num1}} * {{num2}} = 4</p>
+  </div>
+
+  <div class="image">
+    <p-image
+      src="data:image/png;base64,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"
+    ></p-image>
+  </div>
+</div>

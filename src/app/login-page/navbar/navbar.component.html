@@ -1,0 +1,64 @@
+<!-- <p>navbar works!</p> -->
+<p-toolbar>
+  <div class="start">
+    <!-- <i class="pi pi-bars"></i> -->
+
+    <p-button
+      type="button"
+      class="mr-2"
+      (click)="showside()"
+      icon="pi pi-sign-in"
+    ></p-button>
+
+    <p-sidebar styleClass="side" [(visible)]="visibleSidebar1" position="left">
+      <ul>
+        <li>
+          <p-image
+            styleClass="image"
+            src="https://cdn-icons-png.flaticon.com/512/2972/2972291.png"
+            alt="Image"
+            width="50"
+          ></p-image>
+          <a routerLink="/games">Games</a>
+        </li>
+          </ul>
+
+          <ul>
+        <li>
+          <p-image
+            styleClass="image"
+            src="https://cdn-icons-png.flaticon.com/512/1348/1348033.png"
+            alt="Image"
+            width="50"
+          ></p-image>
+          <br>
+          <a routerLink="/ituneapp">ITUNE</a>
+        </li>
+      </ul>
+    </p-sidebar>
+
+    <!-- <p-button label="New" icon="pi pi-plus"></p-button>
+      <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button> -->
+
+    <!-- <p-splitButton label="Save" icon="pi pi-check" [model]="items" styleClass="p-button-warning"></p-splitButton> -->
+  </div>
+
+  <div class="p-toolbar-group-end">
+    <!-- <p-button icon="pi pi-search">HOME</p-button>
+      <p-button icon="pi pi-calendar" styleClass="p-button-success"></p-button>
+      <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button> -->
+  </div>
+  <button pButton type="button" class="p-button1">
+    <a class="pi pi-home" routerLinkActive="/home" routerLink="/home"></a>
+  </button>
+
+  <button pButton type="button" class="p-button2">
+    <a class="pi pi-database" routerLink="/about"></a>
+  </button>
+
+  <button pButton type="button" class="p-button3">
+    <a class="pi pi-user" routerLink="/login-page"></a>
+  </button>
+</p-toolbar>
+
+<h2>Welcome To Routing</h2>

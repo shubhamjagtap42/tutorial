@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    padding: 10px;
+    justify-content: space-between;
+}
+button+ button{
+    margin-left: 30px;
+}
+.game{
+    background-color: grey;
+    height: 30px;
+}
+p{
+    margin-left: 40px;
+    margin-top: 10px;
+}

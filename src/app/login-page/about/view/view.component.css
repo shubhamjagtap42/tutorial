@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.exp{
+    margin-left: 20px;
+}
+
+.p-button-info{
+    margin-left: 800%;
+    height: 43px;
+    width: 90px;
+}

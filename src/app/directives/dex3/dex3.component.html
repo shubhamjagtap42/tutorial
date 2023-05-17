@@ -1,0 +1,126 @@
+<p>dex3 works!</p>
+
+<div style="text-align: center">
+  <h2>directive : Assignment 1</h2>
+
+  <span *ngIf="checked">
+    {{ name }}
+  </span>
+</div>
+
+<hr />
+
+<div style="text-align: center">
+  <h2>directive Assignment 2</h2>
+
+  <button pButton type="button" label="Show" (click)="showtable()" ></button>
+
+  <table style="text-align: center">
+    <span *ngIf="checked; then condition1 else condition2"></span>
+    <ng-template #condition1></ng-template>
+
+    <ng-template #condition2></ng-template>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Annual Salary</th>
+      <th>Date of Birth</th>
+    </tr>
+
+    <tbody>
+        <ng-template ngFor let-employee [ngForOf]="employees">
+
+            <tr >
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.annualSalary}}</td>
+                <td>{{employee.dateOfBirth}}</td>
+                
+            </tr>
+        </ng-template>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+<div>
+    <h2>directive Assignment 3</h2>
+    <p *ngIf="showElement">Show Element</p>    
+<div [ngSwitch]="inpvalue">    
+<p *ngSwitchCase="1">You selected Monday</p>    
+<p *ngSwitchCase="2">You selected Tuesday</p>    
+<p *ngSwitchCase="3">You selected Wednesday</p>   
+<p *ngSwitchCase="4">You selected Thursday</p>   
+<p *ngSwitchCase="5">You selected Friday</p>   
+<p *ngSwitchCase="6">You selected Saturday</p>   
+<p *ngSwitchCase="7">You selected Sunday</p>   
+<p *ngSwitchDefault>Sorry Invalid selection!!</p> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+selector: 'my-app',  
+template: `<h2>{{title}}</h2>    
+<p *ngIf="showElement">Show Element</p>    
+<div [ngSwitch]="inpvalue">    
+<p *ngSwitchCase="1">You selected Monday</p>    
+<p *ngSwitchCase="2">You selected Tuesday</p>    
+<p *ngSwitchCase="3">You selected Wednesday</p>   
+<p *ngSwitchDefault>Sorry Invalid selection!!</p>    
+</div>`    
+})  
+export class AppComponent {  
+
+inpvalue: number = 3;  
+}   -->

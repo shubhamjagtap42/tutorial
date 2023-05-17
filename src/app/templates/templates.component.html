@@ -1,0 +1,76 @@
+<!-- <div style="text-align: center;">
+
+    <ng-template>
+        <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Quas, provident itaque.</p>
+    </ng-template>
+
+</div> -->
+
+<div style="text-align: center;">
+
+    Welcome To {{title}}
+
+</div>
+
+<div style="text-align: center;">
+    Months :
+    <select (change)="changemonths($event)">
+        <option *ngFor="let i of months">
+            {{i}}
+        </option>
+    </select>
+</div>
+<br/>
+
+<div style="text-align: center;">
+    <span *ngIf="Isavailable; then condition1 else condition2">Condition is valid</span>
+    <ng-template #condition1>Condition Is valid from template  </ng-template>
+    <ng-template #condition2>Condition Is Invalid from template  </ng-template>
+</div>
+
+<div style="text-align: center;">
+
+    <button pButton type="button" label="Click Me!" (click)="tempfunction($event)" class="p-button"></button>
+
+    <ng-template #condition1>Condition Is valid</ng-template>
+    <ng-template #condition1>Condition Is Invalid</ng-template>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
